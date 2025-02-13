@@ -6,7 +6,7 @@ class Student {
   // Constructor
   Student(this.name, this.subjects, this.grades);
 
-  // Method untuk menampilkan informasi siswa dengan format yang lebih jelas
+  // informasi siswa dengan format
   void displayStudent() {
     print('\n=== Informasi Siswa ===');
     print('Nama: $name');

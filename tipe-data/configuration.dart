@@ -2,7 +2,7 @@ class Configuration {
   Symbol configName; // Menggunakan Symbol sebagai nama konfigurasi
   dynamic value;     // Tipe dynamic agar bisa menyimpan berbagai jenis nilai
 
-  // Constructor
+  // Konstruktor
   Configuration(this.configName, this.value);
 
   // Method untuk menampilkan informasi konfigurasi
@@ -39,7 +39,7 @@ void main() {
 }
 
 /*
-untuk mencegah bentrok dengan key lain
+Symbol mencegah bentrok dengan key lain
 Symbol tidak bisa diubah jadi lebih aman buat pengolahan data
 
 */
