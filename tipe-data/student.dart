@@ -1,7 +1,7 @@
 class Student {
-  String name;                // Tipe data String untuk nama siswa
-  List<String> subjects;      // List untuk menyimpan daftar mata pelajaran
-  Map<String, double> grades; // Map untuk menyimpan nilai (mata pelajaran -> nilai)
+  String name;                // nama siswa
+  List<String> subjects;      // daftar mata pelajaran
+  Map<String, double> grades; // (mata pelajaran -> nilai)
 
   // Constructor
   Student(this.name, this.subjects, this.grades);

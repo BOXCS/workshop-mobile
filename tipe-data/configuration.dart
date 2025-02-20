@@ -5,7 +5,7 @@ class Configuration {
   // Konstruktor
   Configuration(this.configName, this.value);
 
-  // Method untuk menampilkan informasi konfigurasi
+  // menampilkan informasi konfigurasi
   void displayConfig() {
     print('Nama Konfigurasi: ${configName.toString()}');
     print('Nilai: $value');

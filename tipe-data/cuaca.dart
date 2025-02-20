@@ -1,22 +1,22 @@
 import 'dart:async';
 
 class WeatherService {
-  // Method untuk mengambil cuaca dengan Future (mensimulasikan fetch data dari API)
+  // Simulasi Fetch data API
   Future<String> fetchWeather(String city) async {
     print('Mengambil data cuaca untuk $city...');
     
-    // Simulasi delay 2 detik untuk mengambil data
+    // Simulasi delay
     await Future.delayed(Duration(seconds: 2));
 
     // Simulasi hasil API
     return 'Cuaca di $city: Cerah, 28°C';
   }
 
-  // Method untuk mendapatkan ramalan cuaca dengan beberapa delay berbeda
+  // mendapatkan ramalan cuaca dengan delay berbeda
   Future<Map<String, String>> fetchWeatherForecast(String city) async {
     print('Mengambil data ramalan cuaca untuk $city...');
     
-    // Menjalankan Future.wait agar beberapa operasi berjalan bersamaan
+    // Menjalankan Future.wait
     List<String> forecasts = await Future.wait([
       _fetchDayForecast('Senin'),
       _fetchDayForecast('Selasa'),
@@ -30,7 +30,7 @@ class WeatherService {
     };
   }
 
-  // Method private untuk simulasi ramalan cuaca tiap hari
+  // simulasi ramalan cuaca tiap hari
   Future<String> _fetchDayForecast(String day) async {
     await Future.delayed(Duration(seconds: 1));
     return '$day: Hujan ringan, 25°C';
@@ -38,14 +38,14 @@ class WeatherService {
 }
 
 void main() async {
-  // Membuat instance dari WeatherService
+  // instance dari WeatherService
   WeatherService weatherService = WeatherService();
 
-  // Memanggil method fetchWeather dengan Future dan menangani hasilnya
+  // Memanggil fetchWeather dengan Future
   String weather = await weatherService.fetchWeather('Jakarta');
   print(weather);
 
-  // Memanggil method fetchWeatherForecast untuk mendapatkan ramalan cuaca
+  // Memanggil fetchWeatherForecast 
   Map<String, String> forecast = await weatherService.fetchWeatherForecast('Jakarta');
   print('\nRamalan Cuaca Jakarta:');
   forecast.forEach((day, report) {
